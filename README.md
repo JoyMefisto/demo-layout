@@ -1,9 +1,9 @@
-####Install
+#### Install
 1. `cd demo-layout`
 2. `npm install`
 3. `bower install (npm install bower -g)`
 
-####Use
+#### Use
 1. `gulp watch` - режим разработки localhost:3000
 2. `gulp build` - сбор проекта в dist(!нужна только для актуальности версии в dist, на этапе разработки не нужна!)
 
