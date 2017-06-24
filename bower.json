@@ -1,0 +1,22 @@
+{
+  "name": "template",
+  "authors": {
+    "name": "Shanin Artem",
+    "email": "mefistoggc@mail.ru"
+  },
+  "description": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "html5shiv": "^3.7.3",
+    "normalize-css": "normalize.css#^5.0.0",
+    "font-awesome": "^4.7.0"
+  }
+}

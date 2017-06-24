@@ -1,0 +1,246 @@
+.other {
+
+  &__icon {
+    font-size: 14px;
+
+    &_right {
+      margin-right: 15px;
+    }
+
+    &_left {
+      margin-left: 15px;
+    }
+  }
+
+  /* BUTTON >> */
+
+  &__button {
+    width: 300px;
+    padding: 20px;
+    border: none;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: @gray;
+    color: @black;
+    margin-bottom: 25px;
+  }
+
+  &-scale__button {
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.3);
+    transition: all 200ms cubic-bezier(0.25, 0.39, 0.39, 2.01);
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 25px 15px -15px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &-up__button {
+    background: rgb(11, 40, 107);
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 25px 15px -15px rgba(0, 0, 0, 0.7);
+    transition: all 200ms cubic-bezier(0.32, 0.85, 0.9, 1);
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0px 35px 15px -13px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &-light__button {
+    background: rgba(61, 81, 181, 1);
+    color: @white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: rgba(61, 81, 181, .7);
+      box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+    }
+  }
+  /* << BUTTON */
+
+
+  /* INPUT TEXT >> */
+  &-simple__input {
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    outline: none;
+  }
+
+  &-resize__input {
+    width: 300px;
+    transition: .2s ease;
+
+    &:focus {
+      width:320px;
+    }
+  }
+
+  &-resize {
+    &-wrapper {
+      position: relative;
+      display: inline-block;
+
+      .icon {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+    }
+  }
+  /* << INPUT TEXT */
+
+  /* PULSE >> */
+  &-pulse {
+    padding: 15px;
+    background-color: @white;
+    border-radius: 5px;
+    display: inline-block;
+
+
+    &__dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: green;
+      animation: pulse 2s infinite ease-in-out;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0px 0px 0px 0px rgba(139, 195, 74, .5)
+    }
+    100% {
+      box-shadow: 0px 0px 0px 50px rgba(139, 195, 74, 0)
+    }
+  }
+
+  /* << PULSE */
+
+  /* SWITCH >> */
+  &-switch {
+    display: flex;
+    width: 100px;
+    text-align: center;
+    border-radius: 200px;
+    background: #ef5350;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: background ease-in-out 0.5s;
+
+    & .on, & .off {
+      width: 50%;
+      line-height: 50px;
+      color: white;
+      font-weight: 600;
+    }
+
+    & .handle {
+      cursor: pointer;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      position: absolute;
+      background: @white;
+      top: 2px;
+      left: 2px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+      transition: transform ease-in-out 0.5s;
+    }
+
+    &.is-transitioned .handle {
+      transform: translateX(50px);
+    }
+
+    &.is-transitioned {
+      background: #009688;
+    }
+  }
+
+/* SWITCH >> */
+
+
+/* PROGRESS BAR >> */
+
+  &-progress-bar {
+    width: 200px;
+    height: 30px;
+    background-color: @white;
+    border: 1px solid @white;
+
+    .progress {
+      height: 100%;
+      width: 0%;
+      background-color: #2196F3;
+      animation: progress 5s ease-in-out infinite;
+    }
+  }
+
+  @keyframes progress {
+    0%, 30% {
+      width: 0%
+    }
+    30% {
+      width: 20%
+    }
+    40% {
+      width: 60%
+    }
+    70%, 90% {
+      width: 80%
+    }
+    90%, 100% {
+      width: 100%
+    }
+  }
+
+  /* << PROGRESS BAR */
+
+  /* LOGO >> */
+
+  &-logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  &-kube {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px rgba(0,0,0,.4);
+    animation: logo 2s infinite ease-in-out;
+
+    &__one {
+      background: @logo__one;
+      animation-delay: 1.5s;
+    }
+    &__two {
+      background: @logo__two;
+      animation-delay: 1s;
+    }
+    &__three {
+      background: @logo__three;
+      animation-delay: 0.5s;
+    }
+    &__four {
+      background: @logo__four;
+    }
+  }
+  /* << LOGO */
+}
